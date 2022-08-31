@@ -76,54 +76,55 @@ export default function Game({score, setScore, player, isLoading, setPicked}){
         }
     }
 
-
-    const handleScoreWin = () =>{
-        setTimeout(()=>{
-            setScore(score + 1)
-        },1800)
-    }
-
-    const handleScoreLose = () =>{
-        setTimeout(()=>{
-            setScore(score - 1)
-        },1800)
-    }
-
     const handleComputer = () => {
         const options = ["rock", "paper", "scissors"]
         setComputer(options[Math.floor(Math.random()*3)])
     }
 
-    function result(){
-        if(player === "rock" && computer === "scissors"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "rock" && computer === "paper"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        }else if(player === "paper" && computer === "scissors"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        }else if(player === "paper" && computer === "rock"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "scissors" && computer === "paper"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "scissors" && computer === "rock"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        } else{
-          setMessage("DRAW")
-        }
-      }
+
+
 
     React.useEffect(()=>{
         handleComputer()
     },[])
+
     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     React.useEffect(()=>{
+        const handleScoreWin = () =>{
+            setTimeout(()=>{
+                setScore(score + 1)
+            },1800)
+        }
+    
+        const handleScoreLose = () =>{
+            setTimeout(()=>{
+                setScore(score - 1)
+            },1800)
+        }
+
+        function result(){
+            if(player === "rock" && computer === "scissors"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "rock" && computer === "paper"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            }else if(player === "paper" && computer === "scissors"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            }else if(player === "paper" && computer === "rock"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "scissors" && computer === "paper"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "scissors" && computer === "rock"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            } else{
+              setMessage("DRAW")
+            }
+          }
         result()
     },[computer])
 

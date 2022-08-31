@@ -26,14 +26,14 @@ function App() {
       <div className="container">
         <Header score={score}/>
         <Routes>
-          <Route 
+        <Route 
             exact path="/" 
-            element={
+            index element={
               <Main playerPicked={setPlayer} setPicked={setPicked}/>
             }>
-            </Route>
+          </Route>
           <Route 
-            exact path="/game" 
+            path="/game" 
             element={
             <Game 
               score={score} 
