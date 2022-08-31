@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import background_img from "../img/bg-triangle.svg"
+
 
 export default function Main({playerPicked, setPicked}){
 

@@ -94,35 +94,35 @@ export default function Game({score, setScore, player, isLoading, setPicked}){
         setComputer(options[Math.floor(Math.random()*3)])
     }
 
-    function result(){
-        if(player === "rock" && computer === "scissors"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "rock" && computer === "paper"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        }else if(player === "paper" && computer === "scissors"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        }else if(player === "paper" && computer === "rock"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "scissors" && computer === "paper"){
-          setMessage("YOU WON")
-          handleScoreWin()
-        }else if(player === "scissors" && computer === "rock"){
-          setMessage("YOU LOST")
-          handleScoreLose()
-        } else{
-          setMessage("DRAW")
-        }
-      }
 
     React.useEffect(()=>{
         handleComputer()
     },[])
     
     React.useEffect(()=>{
+        function result(){
+            if(player === "rock" && computer === "scissors"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "rock" && computer === "paper"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            }else if(player === "paper" && computer === "scissors"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            }else if(player === "paper" && computer === "rock"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "scissors" && computer === "paper"){
+              setMessage("YOU WON")
+              handleScoreWin()
+            }else if(player === "scissors" && computer === "rock"){
+              setMessage("YOU LOST")
+              handleScoreLose()
+            } else{
+              setMessage("DRAW")
+            }
+          }
         result()
     },[computer])
 
