@@ -1,7 +1,7 @@
 {
   "name": "rock-paper-scissors-app",
   "version": "0.1.0",
-  "homepage": "https://robo311.github.io/rock-paper-scissors-app-react/",
+  "homepage": "https://robo311.github.io/rock-paper-scissors-app-react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
