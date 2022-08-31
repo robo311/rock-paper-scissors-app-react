@@ -27,13 +27,13 @@ function App() {
         <Header score={score}/>
         <Routes>
           <Route 
-            exact path="/rock-paper-scissors-app-react/" 
+            exact path="/" 
             element={
               <Main playerPicked={setPlayer} setPicked={setPicked}/>
             }>
             </Route>
           <Route 
-            exact path="/rock-paper-scissors-app-react/game" 
+            exact path="/game" 
             element={
             <Game 
               score={score} 
