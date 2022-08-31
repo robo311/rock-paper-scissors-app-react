@@ -1,13 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(237, 49%, 15%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+}
+
+.header-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+  border: 1px solid hsl(217, 16%, 45%);
+  border-radius: 12px;
+  padding: 15px;
+  width: 500px;
+}
+
+.score{
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: hsl(229, 64%, 46%);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.score > span {
+  font-weight: 700;
+  font-size: 45px;
+  color: hsl(229, 25%, 31%);
+}
+
+/* Pre-game screen */
+
+.game-buttons-wrapper{
+  margin-top: 40px;
+  background-image: url("./img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 260px;
+}
+
+.game-buttons-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-buttons-two{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-buttons{
+  border-radius: 80px;
+  width: 140px;
+  height: 140px;
+  margin: 20px 40px;
+  cursor: pointer;
+}
+
+.game-buttons-rock{
+  border: solid 15px hsl(349, 71%, 52%);
+  background-image: url("./img/icon-rock.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.game-buttons-scissors{
+  border: solid 15px hsl(39, 89%, 49%);
+  background-image: url("./img/icon-scissors.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.game-buttons-paper{
+  border: solid 15px hsl(230, 89%, 62%);
+  background-image: url("./img/icon-paper.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+
+/* Game screen */
+
+.pick-title{
+  display: flex;
+  justify-content: center;
+}
+
+.pick-title > h3 {
+  margin: 50px 65px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.picked-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picked-wrapper{
+  margin: 10px 45px;
+}
+
+.picked{
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picked-rock{
+  border: 25px solid hsl(349, 71%, 52%);
+}
+
+.picked-paper{
+  border: 25px solid hsl(230, 89%, 62%);
+}
+
+.picked-scissors{
+  border: 25px solid hsl(39, 89%, 49%);
+}
+
+
+/* Result screen */
+
+.result-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-again-btn{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  padding: 15px 55px;
+  border-radius: 10px;
+  border: none; 
+  color:rgb(255, 68, 68)
+}
+
+.result-title{
+  color: white;
+}
+
+.main-loading-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+
+.footer-info{
+  color: white;
+  position:relative;
+  top: 200px;
+}
+
+.footer-links{
+  text-decoration: none;
+  color: hsl(217, 16%, 45%);
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.rules-btn{
+  position: relative;
+  top: 20px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: white;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+  padding: 10px 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Rules */
+
+.rules-container{
+  background-color: white;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translate(-50%);
+}
+
+.rules-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.rules-header > button{
+  background-image: url("./img/icon-close.svg");
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.rules-header > h1{
+  color: hsl(229, 25%, 31%);
+}
+
+.rules-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rules-overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }

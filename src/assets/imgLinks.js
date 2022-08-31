@@ -1,0 +1,8 @@
+export const pentagon = require("../img/bg-pentagon.svg")
+export const triangle = require("../img/bg-triangle.svg")
+export const close_icon = require("../img/icon-close.svg")
+export const paper = require("../img/icon-paper.svg")
+export const rock = require("../img/icon-rock.svg")
+export const scissors = require("../img/icon-scissors.svg")
+export const rules = require("../img/image-rules.svg")
+export const logo = require("../img/logo.svg")
