@@ -4,7 +4,6 @@
 
 ## Functionality
 
-- 
 - Simple classic rock paper scissors game against computer
 - If you win the game you get +1 into score if you lose then -1
 - [Website](https://robo311.github.io/rock-paper-scissors-app-react/)
